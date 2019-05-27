@@ -1,2 +1,6 @@
-# docker-demos
-Various demos and proof of concepts using containers. 
+# Docker Demos
+Various demonstration projects using Docker containers. 
+
+## /static-website 
+
+Bundles a small static website into an NGINX container. 
