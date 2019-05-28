@@ -10,7 +10,7 @@ named *static-website*.
 
 ```bash
 git clone https://github.com/aitkenably/zeus-site.git
-docker build -t static-website .
+docker build -t aitkenably/zeus-site .
 ```
 
 ### Running 
@@ -20,14 +20,14 @@ container. Hitting http://localhost:8080 in a browser should display
 the static site that is hosted inside the container. 
 
 ```bash
-docker run -d -p=8080:80 --name=demo-site static-website
+docker run -d -p=8080:80 --name=site aitkenably/zeus-site
 ```
 
 ### Stopping 
 
 ```bash
-docker stop demo-site 
-docker rm demo-site 
+docker stop site
+docker rm site
 ```
 
 ### Exploring the image
@@ -36,7 +36,7 @@ Running the image interactively and passing the command `bash` allows
 us to shell into the image and explore what's installed. 
 
 ```bash
- docker run -it --rm static-website bash
+ docker run -it --rm aitkenably/zeus-site bash
 ```
   
 ### Deleting the image 
@@ -45,5 +45,5 @@ Over time, your local Docker installation will probably have dozens of
 images. I delete images that I'm no longer using. 
 
 ```bash
-docker image rm static-website			
+docker image rm aitkenably/zeus-site		
 ```
