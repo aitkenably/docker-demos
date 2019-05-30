@@ -5,7 +5,7 @@ Bundles a Ruby command line script along with its required Gems.
 ### Building
 
 ```bash
-docker build -t aitkenably/ruby-cmdline .
+$ docker build -t aitkenably/ruby-cmdline .
 ```
 
 ### Running 
@@ -13,14 +13,14 @@ docker build -t aitkenably/ruby-cmdline .
 Our Dockerfile sets the ENTRYPOINT of our image to the bundled Ruby script. This allows us to pass command-line arguments to the script. 
 
 ```bash
- docker run --rm -it aitkenably/ruby-cmdline -h
+ $ docker run --rm -it aitkenably/ruby-cmdline -h
  Usage: example [options]
     -h, --help     print usage
     -v, --version  print the version
 ```
 
 ```bash
- docker run --rm -it aitkenably/ruby-cmdline -v
+ $ docker run --rm -it aitkenably/ruby-cmdline -v
  v0.1
 ```
 
@@ -29,11 +29,11 @@ Our Dockerfile sets the ENTRYPOINT of our image to the bundled Ruby script. This
 Running the full `docker run` command is too much to type. Defining a BASH alias makes it easy to run and rerun our command.
 
 ```bash
-alias example='docker run --rm -it aitkenably/ruby-cmdline'	
-example -h
+$ alias example='docker run --rm -it aitkenably/ruby-cmdline'	
+$ example -h
 Usage: example [options]
     -h, --help     print usage
     -v, --version  print the version
-example -v 
+$ example -v 
 v0.1
 ```
