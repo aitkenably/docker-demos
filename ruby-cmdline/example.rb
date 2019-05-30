@@ -3,9 +3,6 @@ require 'slop'
 
 VERSION = 'v0.1'
 
-# TODO: Update documentation
-# TODO: Add BASH alias so you can run in one command 
-
 begin 
     opts = Slop.parse do |o|
         o.banner = "Usage: example [options]"

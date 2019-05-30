@@ -14,10 +14,14 @@ Our Dockerfile sets the ENTRYPOINT of our image to the bundled Ruby script. This
 
 ```bash
  docker run --rm -it aitkenably/ruby-cmdline -h
+ Usage: example [options]
+    -h, --help     print usage
+    -v, --version  print the version
 ```
 
 ```bash
  docker run --rm -it aitkenably/ruby-cmdline -v
+ v0.1
 ```
 
 ### Bash Alias 
@@ -27,5 +31,9 @@ Running the full `docker run` command is too much to type. Defining a BASH alias
 ```bash
 alias example='docker run --rm -it aitkenably/ruby-cmdline'	
 example -h
+Usage: example [options]
+    -h, --help     print usage
+    -v, --version  print the version
 example -v 
+v0.1
 ```
