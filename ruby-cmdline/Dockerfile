@@ -4,13 +4,13 @@ FROM ruby:2.6.3
 # modified since Gemfile.lock
 RUN bundle config --global frozen 1
 
-RUN useradd --create-home info
-WORKDIR /home/info
-USER info 
+RUN useradd --create-home example
+WORKDIR /home/example
+USER example 
 
 COPY Gemfile Gemfile.lock ./
 RUN bundle install
 
-COPY info.rb .
+COPY example.rb .
 
-CMD ["/home/info/info.rb"]
+ENTRYPOINT ["ruby", "/home/example/example.rb"]
